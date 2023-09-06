@@ -1,0 +1,87 @@
+.productDetails-main     {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: top;
+    justify-items: center;
+    background-color: #E9E3CE;
+}
+
+.productDetails-container {
+    width: 60%;
+    height: fit-content;
+    padding: 25px;
+    background-color: aliceblue;
+    display: grid;
+    place-items: center top;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: -2px -2px 25px #000;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.productDetail-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 15px;
+}
+
+.productDetail-section-2 {
+    border-left: 1px solid #b1b1b1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    justify-self: center;
+}
+
+.productinfo-container {
+    display: grid;
+    place-items: center;
+    margin-top: 25px;
+
+}
+
+.buttons-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    cursor: zoom-in;
+
+}
+
+.product-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.productName {
+    width: 80%;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.product-price {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.product-description {
+    padding-left: 50px;
+    font-size: 25px;
+    text-align: left;
+}

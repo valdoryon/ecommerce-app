@@ -1,0 +1,38 @@
+.main-body_container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #E9E3CE ;
+}
+
+.main-card_container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.cart-inventory {
+    background-color: #131313;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    overflow: auto;
+    top: 80px;
+    right: 0px;
+    
+}
+
+.shown {
+    transition: ease-in-out 300ms;
+    right: 0px;
+}
+
+.hidden {
+    transition: ease-in-out 300ms;
+    right: -300px;
+}
