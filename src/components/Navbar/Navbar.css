@@ -1,34 +1,30 @@
 .navbar-container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1000px;
-    background-color: #131313;
     width: 100%;
     height: 80px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);    
+    background-color: var(--main-bg-color);
     z-index: 1000;
+
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: fit-content;
-    padding-left: 200px;
-
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 5fr;
+    padding-left: 25px;
 }
 
 .navbar-title {
     /* Gradient */
-    background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(180, 180, 180));
+    background-image: linear-gradient(180deg, rgb(64, 64, 64),rgb(255, 68, 0), rgb(255, 145, 0));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     /* Gradient */
     
     font-size: 3.5rem;
-    color: #ededed;
     text-align: left;
     font-weight: bold;
     user-select: none;
@@ -40,30 +36,50 @@
 .navbar-logo {
     width: 45px;
     height: 45px;
-    filter: invert(99%) sepia(2%) saturate(260%) hue-rotate(246deg) brightness(119%) contrast(86%);
 }
 
-
-.navbar-brand:hover .navbar-logo {
-    transition: 500ms;
-    transform: rotate(180deg);
-}
-
-.navbar-brand:not(:hover) .navbar-logo{
-    transition: 500ms;
-}
 
 
 .navbar-icons {
     display: grid;
     place-items: center;
-    width: fit-content;
-    height: fit-content;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
 }
 
 .navbar-cart-icon {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    filter: invert(99%) sepia(2%) saturate(260%) hue-rotate(246deg) brightness(119%) contrast(86%);
+    filter: var(--main-icon-color);  
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-icons {
+        column-gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-title {
+        font-size: 2rem;
+    }
+
+    .navbar-logo {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .navbar-brand {
+        padding-left: 15px;
+    }
+
+    .navbar-logo{
+        display: none;
+    }
+    
 }

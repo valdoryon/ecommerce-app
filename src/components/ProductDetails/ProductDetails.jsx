@@ -5,17 +5,35 @@ import { getProducts } from '../../services/getProducts'
 import { useParams } from 'react-router-dom'
 
 const ProductDetails = () => {
+  const restoredCart = JSON.parse(window.localStorage.getItem('cart'))
   const { id } = useParams()
   const API = `https://fakestoreapi.com/products/${id}`
   const [product, setProduct] = useState([])
-
-  console.log(API)
+  const [cart, setCart] = useState(restoredCart !== null ? restoredCart : [])
 
   useEffect(() => {
     getProducts(API, setProduct)
   }, [])
 
-  console.log(product)
+  useEffect(() => {
+    window.localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
+  function checkInCart () {
+    if (cart.find(a => a.id === product.id)) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function handleAddToCart () {
+    if (cart.find(a => a.id === product.id)) {
+      setCart(cart.filter(a => a.id !== product.id))
+    } else {
+      setCart([...cart, product])
+    }
+  }
 
   return (
     <>
@@ -24,7 +42,7 @@ const ProductDetails = () => {
         <section className='productDetails-container'>
           <section className='productDetail-section-1'>
             <img src={product.image} className='product-image' />
-            <h1 className='product-title'>DESCRIPCIÓN</h1>
+            <h1 className='product-title'>DESCRIPTION</h1>
             <span className='product-description'>{product.description}</span>
           </section>
           <section className='productDetail-section-2'>
@@ -33,7 +51,9 @@ const ProductDetails = () => {
               <h1 className='product-price'>{'$' + product.price}</h1>
               <div className='buttons-container'>
                 <button className='button-secondary'>Comprar ahora</button>
-                <button className='button-primary'>Agregar al carro</button>
+                <button onClick={handleAddToCart} className='button-primary'>
+                  {checkInCart() ? 'Quitar del Carrito' : 'Agregar al carrito'}
+                </button>
               </div>
             </div>
           </section>
