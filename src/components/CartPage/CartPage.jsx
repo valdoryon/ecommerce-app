@@ -30,7 +30,7 @@ const Cart = () => {
             <div className='cart-purchase-container'>
               <button className='cart-purchase_button'>Purchase</button>
               <button onClick={() => setCart([])} className='cart-purchase_button'>Remove all</button>
-              <h1 className='cart-final-price'>Total: ${totalPrice}</h1>
+              <span className='cart-final-price'>Total: ${totalPrice}</span>
             </div>
           </div>
         </section>
@@ -39,7 +39,7 @@ const Cart = () => {
     } else {
       return (
         <section className='cart-wrapper'>
-          <h1>NO TENES NADA EN TU CARRITO :( <a href='/'>VE A LA TIENDA</a></h1>
+          <h1>You don't have anything in your cart :( <a href='/'>GO TO STORE</a></h1>
         </section>
       )
     }

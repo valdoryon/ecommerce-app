@@ -50,9 +50,9 @@ const ProductDetails = () => {
               <h1 className='product-title productName'>{product.title}</h1>
               <h1 className='product-price'>{'$' + product.price}</h1>
               <div className='buttons-container'>
-                <button className='button-secondary'>Comprar ahora</button>
+                <button className='button-secondary'>Buy Now</button>
                 <button onClick={handleAddToCart} className='button-primary'>
-                  {checkInCart() ? 'Quitar del Carrito' : 'Agregar al carrito'}
+                  {checkInCart() ? 'Remove from cart' : 'Add to cart'}
                 </button>
               </div>
             </div>
