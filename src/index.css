@@ -1,22 +1,24 @@
-.light {
+[scheme='light']  {
   --main-bg-color: #f8f8f8;
   --secondary-bg-color: #e7e7e7;
   --main-icon-color: invert(0%) sepia(100%) saturate(0%) hue-rotate(11deg) brightness(94%) contrast(103%);
   --main-text-color: #6d5600;
 }
 
-.dark {
+[scheme='dark']  {
   --main-bg-color: #36394c;
   --secondary-bg-color: #222736;  
   --main-icon-color: invert(100%) sepia(100%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);   
   --main-text-color: #ffe896;
 }
 
+html {
+  background: var(--secondary-bg-color);
+}
 
 html, body, #root {
   position: relative;
   min-height: 100vh;
-  
 }
 
 * {
@@ -25,16 +27,16 @@ html, body, #root {
 }
 
 .button-primary {
-  width: 400px;
-  height: 50px;
+
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
   border: none;
   border-radius: 10px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  
+  padding: 0.5rem 0;
+  width: 100%;
   color: #000000;
   background-color: #a2a2a2;
   
@@ -42,15 +44,16 @@ html, body, #root {
 }
 
 .button-secondary {
-  width: 400px;
-  height: 50px;
+  padding: 0.5rem 0;
+  width: 100%;
+  
   margin-top: 5px;
   margin-bottom: 5px;
   border: none;
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: lighter;
-    font-size: 20px;
+    font-size: 1.5rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
   color: #dddddd;
@@ -62,30 +65,5 @@ html, body, #root {
 .links {
   text-decoration: none;
   color: #000000;
-}
-
-
-@media screen and (max-width: 500px) {
-  .button-primary {
-    width: 300px
-  }
-
-.button-secondary {
-    width: 300px;
-  }
-  
-}
-
-
-@media screen and (max-width: 350px) {
-  .button-primary {
-    width: 200px
-  }
-
-.button-secondary {
-    width: 200px;
-  }
-  
-
 }
 

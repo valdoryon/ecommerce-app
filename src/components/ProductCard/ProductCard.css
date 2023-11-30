@@ -1,39 +1,61 @@
 .productCard-container {
     display: grid;  
-    width: 300px;
-    height: 450px;
+    width: min-content;
+    height: max-content;
     background-color: #131313;
     border-radius: 5px;
     text-decoration: none;
+    
+    width: 300px;
+    height: 425px;
+    box-sizing: border-box;
 }
 
 .productCard-container:hover {
     transition: all 200ms;
-    box-shadow:  3px 3px 10px #000;
 }
 
 .productCard-image {
-    width: 300px;
-    height: 350px;
     border-radius: 5px 5px 0 0 ;
     cursor: pointer;
-    
+    width: fit-content;
+    height: 300px;
+
+    && img {
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+    }
 }
 
 .productCard-text_container {
-    height: 80px;
-    display: grid;
-    place-items: center;
-    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+
+    box-sizing: border-box;
+    width: 300px;
+    height: 125px;
+   
 }
 
 .productCard-title {
-    color:#e1e1e1;
-    font-weight: 100;    
-    font-size: 1.1rem;
-    text-wrap: nowrap;
-    text-align: left;
+    width: 95%;
     
+    box-sizing: border-box;
+    color:#e1e1e1;
+    font-weight: 500;    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
+    font-size: 0.9rem;
+    text-align: center;    
+
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
 }
 
 
@@ -41,54 +63,27 @@
     color:#e1e1e1;
     font-size: 1.2rem;
     font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
+    text-align: center;
 }
 
 .productCard-addButton {
-    background-color: #000000;
+    background-color: #ffffff;
+    width: 50%;
     border-radius: 5px;
-    border: 1px solid #888888;
+    border: none;
     cursor: pointer;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5rem 1rem;
     font-weight: bold;
-    color: #09ba00;
-       
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
 }
 
 .inCart:hover span {
-    display: none;
-    
+    display: none;    
 }
 
 .inCart:hover:before {
     content: 'REMOVE';
-    color: rgb(199, 0, 0);
-}
-
-@media screen and (max-width: 300px) {
-    .main-body_container {
-        padding: 10px;
-    }
-
-    .productCard-container {
-        width: 240px;
-    }
-    
-    .productCard-image {
-        width: 240px
-    }
-
-    .productCard-title {
-        font-size: 0.9rem;
-    }
-
-    .productCard-price {
-        font-size: 1rem;
-    }
-
-    .productCard-addButton {
-        padding: 2px;
-
-    }
-    
+    color: rgb(255, 56, 56);
 }

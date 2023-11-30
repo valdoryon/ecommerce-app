@@ -1,3 +1,7 @@
-import { createContext } from 'react'
+import { createContext } from 'react';
 
-export const ThemeContext = createContext('light')
+export const ThemeContext = createContext(
+  window.localStorage.getItem('theme')
+    ? window.localStorage.getItem('theme')
+    : 'light'
+);

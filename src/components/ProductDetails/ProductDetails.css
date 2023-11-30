@@ -1,42 +1,26 @@
-.productDetails-main     {
-    display: grid;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: var(--secondary-bg-color);
-    padding: 25px
-}
 
 .productDetails-container {
-    display: grid;
-    place-items: center;
-    width: min-content;
-    height: fit-content;
-    padding: 25px;
+    margin: 5rem auto;
+    display: flex;
+    max-width: 900px;
+    padding: 1rem;
     background-color: aliceblue;
-    grid-template-columns: repeat(2, 1fr);
     box-shadow: -2px -2px 25px #000;
     border-radius: 10px;
 }
 
-.productDetail-section-1 {
-    display: grid;
-    place-items: center;
-    
-    padding: 15px;
-}
 
 .productDetail-section-2 {
-    padding: 15px;
+    padding-left: 1rem;
     border-left: 1px solid #b1b1b1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
 }
 
 .productinfo-container {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
 .buttons-container {
@@ -44,18 +28,17 @@
     place-items: center;
 }
 
+.productDetail-section-1 {
+    display: grid;
+    place-items: center;
+    padding-right: 1rem;
+}
+
 .product-image {
     width: 400px;
     height: 400px;
     cursor: zoom-in;
-
-}
-
-.product-title {
-    padding: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-    text-transform: uppercase;
+    object-fit: fill;    
 }
 
 .productName {
@@ -71,68 +54,26 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.product-description {
-    padding-left: 50px;
+.product-description { 
     font-size: 1.2rem;
+    margin: 1rem 0;
     text-align: left;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 900px) {
     .productDetails-container {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        max-width: min-content;
     }
-
+    .productDetail-section-1 {
+        padding-right: 0;
+    }
     .productDetail-section-2 {
-        border-left: none;
-        border-top: 1px solid #b1b1b1;
-    }    
-}
-
-@media screen and (max-width: 500px) {
-    .productDetails-container {
-        padding: 0;        
-    }
-
-    .product-image {
-        width: 300px;
-        height: 300px;
-    }
-
-    .button-primary {
-        width: 300px
-    }
-
-    .button-secondary {
-        width: 300px;
-    } 
-}
-
-
-@media screen and (max-width: 350px) {
-
-    .product-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .product-title {
-        font-size: 1rem;
-        padding: 5px;
-    }
-
-    .product-description {
-        padding: 3px;
-        text-align: left;
-    }
-
-    .productName {
-        font-size: 1.2rem;
-    }
-
-    .product-price {
-        font-size: 1.1rem;
+        border: none;
     }
 
 
 
+    
 }

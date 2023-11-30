@@ -1,6 +1,6 @@
-import React from 'react'
-import './CartProduct.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './CartProduct.css';
+import { Link } from 'react-router-dom';
 const CartProduct = (props) => {
   return (
     <div className='cartProduct-container'>
@@ -15,7 +15,7 @@ const CartProduct = (props) => {
         <img src='/cart-cross.svg' />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CartProduct
+export default CartProduct;

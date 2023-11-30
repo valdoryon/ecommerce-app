@@ -1,37 +1,11 @@
 .main-body_container {
-    display: grid;
-    min-height: 100vmax;
-    place-items: center;
-    background-color: var(--secondary-bg-color);
-    padding: 25px;
+    padding: 3rem;
 }
 
 .main-card_container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: fit-content;
-    row-gap: 25px;
-    column-gap: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 2rem;
 }
-
-@media screen and (max-width: 1280px)
-        {
-            .main-card_container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-
-@media screen and (max-width: 800px)
-{
-    .main-card_container {
-        grid-template-columns: repeat(2, 1fr);
-            }
-}
-
-@media screen and (max-width: 600px)
-        {
-            .main-card_container {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
